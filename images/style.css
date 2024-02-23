@@ -1,0 +1,90 @@
+body {
+  background-color: mediumpurple;
+}
+
+.square {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  opacity: .6;
+}
+
+/* .square {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+0% {
+}
+
+100% {
+  transform: translateX(calc(100vw - 100% - 16px));
+}
+} */
+
+/* .square {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  /* animation-direction: reverse; /
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+100% {
+  transform: translateX(calc(100vw - 100% - 16px));
+}
+} */
+
+/* .square {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+} */
+
+.square {
+  /* animation-name: move, blink;
+  animation-duration: 1s, 200ms;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; /
+  animation-timing-function: steps(10); */
+
+  animation: move 1s forwards alternate infinite, blink 100ms infinite;
+}
+
+.square:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
